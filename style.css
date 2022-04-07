@@ -1,0 +1,151 @@
+:root {
+  --default-white: rgb(214, 214, 214);
+  --default-black: rgb(14, 13, 13);
+  --default-grey: rgb(207, 206, 206);
+  --default-yellow: #fce131;
+  --default-bg: #151d20;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+    left: -5px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+html {
+  font-size: 14px;
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page-wrapper {
+  height: 100%;
+  background-color: #151d20;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+    url(img/pears.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+header {
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: var(--default-white);
+  font-size: 2rem;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 0 2rem;
+}
+
+a {
+  font-weight: 500;
+  color: var(--default-grey);
+  text-decoration: none;
+}
+
+section.hero {
+  padding-top: 6rem;
+}
+
+h2 {
+  position: relative;
+  font-size: 3rem;
+  color: var(--default-white);
+  font-weight: 400;
+  opacity: 0;
+  left: -20px;
+  animation: fadeIn 2s forwards ease-in;
+}
+
+span {
+  font-size: 6rem;
+  display: block;
+  color: var(--default-yellow);
+  font-weight: 800;
+}
+
+p {
+  width: 400px;
+  position: relative;
+  left: -20px;
+  color: var(--default-grey);
+  opacity: 0;
+  animation: fadeIn 2s 1s forwards ease-in;
+}
+
+button {
+  background-color: var(--default-yellow);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  border: none;
+  margin-top: 2.5rem;
+  cursor: pointer;
+  position: relative;
+  left: -20px;
+  opacity: 0;
+  animation: fadeIn 2s 2s forwards ease-in;
+}
+
+.container {
+  width: auto;
+  margin: 0 300px;
+}
+
+@media screen and (max-width: 1260px) {
+  .container {
+    margin: 0 200px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 100%;
+    margin: 0;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section.hero {
+    padding: 0 2rem;
+  }
+}
